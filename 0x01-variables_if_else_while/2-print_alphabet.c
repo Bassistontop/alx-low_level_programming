@@ -2,11 +2,11 @@
 /**
  * main - prints the alphabets
  *
- * return: Always 0 (success)
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-char alp[26] = "abcdefghijklmnopqrstuvrxyz";
+char alp[26] = "abcdefghijklmnopqrstuvwxyz";
 int i;
 for (i = 0; i < 26; i++)
 {
