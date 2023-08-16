@@ -15,7 +15,7 @@ unsigned long int l = 1000000000;
 unsigned long int bef1;
 unsigned long int bef2;
 unsigned long int aft1;
-unsigned long int aftt2;
+unsigned long int aft2;
 printf("%lu", bef);
 for (i = 1; i < 91; i++)
 {
@@ -36,6 +36,6 @@ bef1 = aft1 - bef1;
 aft2 = aft2 + bef2;
 bef2 = aft2 - bef2;
 }
-prointf("\n");
+printf("\n");
 return (0);
 }
