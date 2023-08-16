@@ -6,20 +6,16 @@
  */
 int main(void)
 {
-unsigned long int j, k, next, sum;
-j = 1;
-k = 2;
-sum = 0;
-for (j = 1; j <= 33; ++j)
+int i = 0;
+long j = 1, k = 2, sum = k;
+while (k + j < 4000000)
 {
-if (j < 4000000 && (j % 2) == 0)
-{
-sum = sum + j;
+k += j;
+if (k % 2 == 0)
+sum += k;
+j = k - j;
+i++;
 }
-next = j + k;
-j = k;
-k = next;
-}
-printf("%lu\n", sum);
+printf("%ld\n", sum);
 return (0);
 }
