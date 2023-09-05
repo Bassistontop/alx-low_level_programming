@@ -33,8 +33,8 @@ if (gridout[a] == NULL)
 {
 for (a--; a >= 0; a--)
 return (NULL);
-free(gridout);
 free(gridout[a]);
+free(gridout);
 }
 }
 for (a = 0; a < height; a++)
