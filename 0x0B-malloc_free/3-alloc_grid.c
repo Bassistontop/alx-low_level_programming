@@ -32,9 +32,9 @@ gridout[a] = malloc(width * sizeof(int));
 if (gridout[a] == NULL)
 {
 for (a--; a >= 0; a--)
-return (NULL);
 free(gridout[a]);
 free(gridout);
+return (NULL);
 }
 }
 for (a = 0; a < height; a++)
