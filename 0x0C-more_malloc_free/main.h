@@ -7,5 +7,9 @@ void *_calloc(unsigned int nmemb, unsigned int size);
 int *array_range(int min, int max);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int _putchar(char c);
+int main(int argc, char *argv[]);
+int _strlen(char *l);
+void error(void);
+int is_digit(char *s);
 
 #endif /* MAIN_H */
