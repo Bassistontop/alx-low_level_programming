@@ -56,7 +56,7 @@ exit(98);
  * @argc: argument count
  * @argv: argument vector
  *
- * Return: 0
+ * Return: 0 (success)
  */
 
 int main(int argc, char *argv[])
