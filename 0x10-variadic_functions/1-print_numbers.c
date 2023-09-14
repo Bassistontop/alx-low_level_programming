@@ -14,43 +14,20 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list nums;
-	unsigned int index;
+	unsigned int i, arr;
 
-	va_start(nums, n);
+	va_list ptr;
 
-	for (index = 0; index < n; index++)
+	va_start(ptr, n);
+
+	for (i = 0; i < n; i++)
 	{
-		int num = va_arg(nums, int);
+		arr = va_arg(ptr, const unsigned int);
+		printf("%d", arr);
 
-		int temp = num;
-		int digit_count = 0;
-
-		do {
-			temp /= 10;
-			digit_count++;
-		} while (temp != 0);
-
-		temp = num;
-		for (int j = digit_count - 1; j >= 0; j--)
-		{
-			char digit = (temp / (int)pow(10, j)) + '0';
-
-			putchar(digit);
-			temp %= (int)pow(10, j);
-		}
-
-		if (index != (n - 1) && separator != NULL)
-		{
-			while (*separator != '\0')
-			{
-				putchar(*separator);
-				separator++;
-			}
-		}
+		if (i != (n - 1) && separator != NULL)
+			printf("%s", separator);
 	}
-
-	va_end(nums);
-
-	putchar('\n');
+	printf("\n");
+	va_end(ptr);
 }
